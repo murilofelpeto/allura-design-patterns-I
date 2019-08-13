@@ -3,7 +3,8 @@ package br.com.murilo.allura.chain_of_responsability_exercise.resposta;
 import br.com.murilo.allura.chain_of_responsability_exercise.contas.Conta;
 import br.com.murilo.allura.chain_of_responsability_exercise.formatos.Formato;
 import br.com.murilo.allura.chain_of_responsability_exercise.formatos.Requisicao;
-
+import lombok.AllArgsConstructor;
+@AllArgsConstructor
 public class RespostaCSV implements Resposta {
 
 	private Resposta outraResposta;
@@ -16,10 +17,4 @@ public class RespostaCSV implements Resposta {
 			outraResposta.responde(requisicao, conta);
 		}
 	}
-
-	@Override
-	public void setProxima(Resposta outraResposta) {
-		this.outraResposta = outraResposta;
-	}
-
 }

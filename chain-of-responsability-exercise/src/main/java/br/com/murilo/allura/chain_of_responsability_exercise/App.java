@@ -8,7 +8,7 @@ import br.com.murilo.allura.chain_of_responsability_exercise.imprime_ados.Imprim
 public class App {
 	public static void main(String[] args) {
 		Conta conta = new Conta("Murilo", 6000.00);
-		Requisicao requisicao = new Requisicao(Formato.CSV);
+		Requisicao requisicao = new Requisicao(Formato.XML);
 		Imprimir imprimir = new Imprimir();
 		
 		imprimir.imprimir(requisicao, conta);

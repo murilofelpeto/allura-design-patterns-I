@@ -6,5 +6,4 @@ import br.com.murilo.allura.chain_of_responsability_exercise.formatos.Requisicao
 public interface Resposta {
 
 	void responde(Requisicao requisicao, Conta conta);
-	void setProxima(Resposta outraResposta);
 }

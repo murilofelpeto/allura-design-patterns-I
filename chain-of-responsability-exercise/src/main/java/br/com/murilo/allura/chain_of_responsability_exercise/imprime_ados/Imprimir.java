@@ -10,13 +10,10 @@ import br.com.murilo.allura.chain_of_responsability_exercise.resposta.RespostaXM
 public class Imprimir {
 
 	public void imprimir(Requisicao requisicao, Conta conta) {
-		Resposta csv = new RespostaCSV();
-		Resposta xml = new RespostaXML();
 		Resposta porcentagem = new RespostaPorcentagem();
+		Resposta csv = new RespostaCSV(porcentagem);
+		Resposta xml = new RespostaXML(csv);
 		
-		csv.setProxima(xml);
-		xml.setProxima(porcentagem);
-		
-		csv.responde(requisicao, conta);
+		xml.responde(requisicao, conta);
 	}
 }
